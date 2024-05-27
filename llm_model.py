@@ -7,7 +7,7 @@ from langchain.chains import RetrievalQA
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from huggingface_hub import InferenceClient
 import os
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 
 vector_index_path = "assets/vectordb/faiss_index"
 
@@ -15,12 +15,12 @@ class LlmModel:
     
     def __init__(self):
         # load dot env variables   
-        self.load_env_variables()   
+        #self.load_env_variables()   
         # load llm model
         self.hf_embeddings = self.load_huggingface_embeddings()
 
-    def load_env_variables(self):
-        load_dotenv()  # take environment variables from .env
+    #def load_env_variables(self):
+        #load_dotenv()  # take environment variables from .env
     
     def custom_prompt(self, question, history, context):
         #RAG prompt template
